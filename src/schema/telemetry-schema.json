@@ -6,344 +6,344 @@
   "type": "object",
   "properties": {
     "isRaceOn": {
-      "description": "",
-      "type": "boolean"
+      "type": "boolean",
+      "description": "4 bytes, 0 = false, > 0 = true"
     },
     "timestampMS": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes"
     },
     "engineMaxRpm": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "engineIdleRpm": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "currentEngineRpm": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "accelerationX": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "accelerationY": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "accelerationZ": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "velocityX": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "velocityY": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "velocityZ": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "angularVelocityX": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "angularVelocityY": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "angularVelocityZ": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "yaw": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "pitch": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "roll": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "normalizedSuspensionTravelFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "normalizedSuspensionTravelFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "normalizedSuspensionTravelRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "normalizedSuspensionTravelRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipRatioFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipRatioFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipRatioRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipRatioRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelRotationSpeedFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelRotationSpeedFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelRotationSpeedRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelRotationSpeedRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelOnRumbleStripFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelOnRumbleStripFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelOnRumbleStripRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelOnRumbleStripRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelInPuddleDepthFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelInPuddleDepthFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelInPuddleDepthRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "wheelInPuddleDepthRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "surfaceRumbleFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "surfaceRumbleFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "surfaceRumbleRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "surfaceRumbleRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipAngleFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipAngleFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipAngleRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireSlipAngleRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireCombinedSlipFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireCombinedSlipFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireCombinedSlipRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "tireCombinedSlipRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "suspensionTravelMetersFrontLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "suspensionTravelMetersFrontRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "suspensionTravelMetersRearLeft": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "suspensionTravelMetersRearRight": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "carOrdinal": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes, UInt8"
     },
     "carClass": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes, UInt8"
     },
     "carPerformanceIndex": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes, UInt8"
     },
     "drivetrainType": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes, UInt8"
     },
     "numCylinders": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "4 bytes, UInt8"
     },
     "positionX": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "positionY": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "positionZ": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "speed": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "power": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "torque": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
-    "tireTempFl": {
-      "description": "",
-      "type": "number"
+    "tireTempFrontLeft": {
+      "type": "number",
+      "description": "4 bytes, float"
     },
-    "tireTempFr": {
-      "description": "",
-      "type": "number"
+    "tireTempFrontRight": {
+      "type": "number",
+      "description": "4 bytes, float"
     },
-    "tireTempRl": {
-      "description": "",
-      "type": "number"
+    "tireTempRearLeft": {
+      "type": "number",
+      "description": "4 bytes, float"
     },
-    "tireTempRr": {
-      "description": "",
-      "type": "number"
+    "tireTempRearRight": {
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "boost": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "fuel": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "distance": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "bestLapTime": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "lastLapTime": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "currentLapTime": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "currentRaceTime": {
-      "description": "",
-      "type": "number"
+      "type": "number",
+      "description": "4 bytes, float"
     },
     "lap": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "2 bytes"
     },
     "racePosition": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "accelerator": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "brake": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "clutch": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "handbrake": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "gear": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "steer": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "normalDrivingLine": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     },
     "normalAiBrakeDifference": {
-      "description": "",
-      "type": "integer"
+      "type": "integer",
+      "description": "1 byte"
     }
   },
   "required": [
