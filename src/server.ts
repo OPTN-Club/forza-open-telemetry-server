@@ -1,7 +1,7 @@
 import Collector from './Collector';
 import Parser from './Parser';
 
-const parser = new Parser('ForzaHorizon4');
+const parser = new Parser('ForzaHorizon5');
 const server = new Collector(11000, (buf, rinfo) => {
   console.log('Received message', buf.length, 'bytes long, rinfo.size=', rinfo.size);
   const data = parser.toArray(buf);

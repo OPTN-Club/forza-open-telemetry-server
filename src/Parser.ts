@@ -28,7 +28,7 @@ const parseTypeMap: Record<ParseType, LittleEndianReader> = {
 };
 
 type ParserFormat = [keyof TelemetryRow, number, ParseType];
-type TelemetryFormat = 'ForzaHorizon4';
+type TelemetryFormat = 'ForzaHorizon5';
 
 class Parser {
   format: ParserFormat[];
