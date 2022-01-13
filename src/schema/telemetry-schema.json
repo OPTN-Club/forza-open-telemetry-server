@@ -1,0 +1,436 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/forza-horizon-5-telemetry.schema.json",
+  "title": "Forza Horizon 5 Telemetry",
+  "description": "Telemetry data from the game",
+  "type": "object",
+  "properties": {
+    "isRaceOn": {
+      "description": "",
+      "type": "boolean"
+    },
+    "timestampMS": {
+      "description": "",
+      "type": "integer"
+    },
+    "engineMaxRpm": {
+      "description": "",
+      "type": "number"
+    },
+    "engineIdleRpm": {
+      "description": "",
+      "type": "number"
+    },
+    "currentEngineRpm": {
+      "description": "",
+      "type": "number"
+    },
+    "accelerationX": {
+      "description": "",
+      "type": "number"
+    },
+    "accelerationY": {
+      "description": "",
+      "type": "number"
+    },
+    "accelerationZ": {
+      "description": "",
+      "type": "number"
+    },
+    "velocityX": {
+      "description": "",
+      "type": "number"
+    },
+    "velocityY": {
+      "description": "",
+      "type": "number"
+    },
+    "velocityZ": {
+      "description": "",
+      "type": "number"
+    },
+    "angularVelocityX": {
+      "description": "",
+      "type": "number"
+    },
+    "angularVelocityY": {
+      "description": "",
+      "type": "number"
+    },
+    "angularVelocityZ": {
+      "description": "",
+      "type": "number"
+    },
+    "yaw": {
+      "description": "",
+      "type": "number"
+    },
+    "pitch": {
+      "description": "",
+      "type": "number"
+    },
+    "roll": {
+      "description": "",
+      "type": "number"
+    },
+    "normalizedSuspensionTravelFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "normalizedSuspensionTravelFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "normalizedSuspensionTravelRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "normalizedSuspensionTravelRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipRatioFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipRatioFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipRatioRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipRatioRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelRotationSpeedFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelRotationSpeedFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelRotationSpeedRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelRotationSpeedRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelOnRumbleStripFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelOnRumbleStripFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelOnRumbleStripRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelOnRumbleStripRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelInPuddleDepthFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelInPuddleDepthFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelInPuddleDepthRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "wheelInPuddleDepthRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "surfaceRumbleFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "surfaceRumbleFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "surfaceRumbleRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "surfaceRumbleRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipAngleFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipAngleFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipAngleRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireSlipAngleRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireCombinedSlipFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireCombinedSlipFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "tireCombinedSlipRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "tireCombinedSlipRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "suspensionTravelMetersFrontLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "suspensionTravelMetersFrontRight": {
+      "description": "",
+      "type": "number"
+    },
+    "suspensionTravelMetersRearLeft": {
+      "description": "",
+      "type": "number"
+    },
+    "suspensionTravelMetersRearRight": {
+      "description": "",
+      "type": "number"
+    },
+    "carOrdinal": {
+      "description": "",
+      "type": "integer"
+    },
+    "carClass": {
+      "description": "",
+      "type": "integer"
+    },
+    "carPerformanceIndex": {
+      "description": "",
+      "type": "integer"
+    },
+    "drivetrainType": {
+      "description": "",
+      "type": "integer"
+    },
+    "numCylinders": {
+      "description": "",
+      "type": "integer"
+    },
+    "positionX": {
+      "description": "",
+      "type": "number"
+    },
+    "positionY": {
+      "description": "",
+      "type": "number"
+    },
+    "positionZ": {
+      "description": "",
+      "type": "number"
+    },
+    "speed": {
+      "description": "",
+      "type": "number"
+    },
+    "power": {
+      "description": "",
+      "type": "number"
+    },
+    "torque": {
+      "description": "",
+      "type": "number"
+    },
+    "tireTempFl": {
+      "description": "",
+      "type": "number"
+    },
+    "tireTempFr": {
+      "description": "",
+      "type": "number"
+    },
+    "tireTempRl": {
+      "description": "",
+      "type": "number"
+    },
+    "tireTempRr": {
+      "description": "",
+      "type": "number"
+    },
+    "boost": {
+      "description": "",
+      "type": "number"
+    },
+    "fuel": {
+      "description": "",
+      "type": "number"
+    },
+    "distance": {
+      "description": "",
+      "type": "number"
+    },
+    "bestLapTime": {
+      "description": "",
+      "type": "number"
+    },
+    "lastLapTime": {
+      "description": "",
+      "type": "number"
+    },
+    "currentLapTime": {
+      "description": "",
+      "type": "number"
+    },
+    "currentRaceTime": {
+      "description": "",
+      "type": "number"
+    },
+    "lap": {
+      "description": "",
+      "type": "integer"
+    },
+    "racePosition": {
+      "description": "",
+      "type": "integer"
+    },
+    "accelerator": {
+      "description": "",
+      "type": "integer"
+    },
+    "brake": {
+      "description": "",
+      "type": "integer"
+    },
+    "clutch": {
+      "description": "",
+      "type": "integer"
+    },
+    "handbrake": {
+      "description": "",
+      "type": "integer"
+    },
+    "gear": {
+      "description": "",
+      "type": "integer"
+    },
+    "steer": {
+      "description": "",
+      "type": "integer"
+    },
+    "normalDrivingLine": {
+      "description": "",
+      "type": "integer"
+    },
+    "normalAiBrakeDifference": {
+      "description": "",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "isRaceOn",
+    "timestampMS",
+    "engineMaxRpm",
+    "engineIdleRpm",
+    "currentEngineRpm",
+    "accelerationX",
+    "accelerationY",
+    "accelerationZ",
+    "velocityX",
+    "velocityY",
+    "velocityZ",
+    "angularVelocityX",
+    "angularVelocityY",
+    "angularVelocityZ",
+    "yaw",
+    "pitch",
+    "roll",
+    "normalizedSuspensionTravelFrontLeft",
+    "normalizedSuspensionTravelFrontRight",
+    "normalizedSuspensionTravelRearLeft",
+    "normalizedSuspensionTravelRearRight",
+    "tireSlipRatioFrontLeft",
+    "tireSlipRatioFrontRight",
+    "tireSlipRatioRearLeft",
+    "tireSlipRatioRearRight",
+    "wheelRotationSpeedFrontLeft",
+    "wheelRotationSpeedFrontRight",
+    "wheelRotationSpeedRearLeft",
+    "wheelRotationSpeedRearRight",
+    "wheelOnRumbleStripFrontLeft",
+    "wheelOnRumbleStripFrontRight",
+    "wheelOnRumbleStripRearLeft",
+    "wheelOnRumbleStripRearRight",
+    "wheelInPuddleDepthFrontLeft",
+    "wheelInPuddleDepthFrontRight",
+    "wheelInPuddleDepthRearLeft",
+    "wheelInPuddleDepthRearRight",
+    "surfaceRumbleFrontLeft",
+    "surfaceRumbleFrontRight",
+    "surfaceRumbleRearLeft",
+    "surfaceRumbleRearRight",
+    "tireSlipAngleFrontLeft",
+    "tireSlipAngleFrontRight",
+    "tireSlipAngleRearLeft",
+    "tireSlipAngleRearRight",
+    "tireCombinedSlipFrontLeft",
+    "tireCombinedSlipFrontRight",
+    "tireCombinedSlipRearLeft",
+    "tireCombinedSlipRearRight",
+    "suspensionTravelMetersFrontLeft",
+    "suspensionTravelMetersFrontRight",
+    "suspensionTravelMetersRearLeft",
+    "suspensionTravelMetersRearRight",
+    "carOrdinal",
+    "carClass",
+    "carPerformanceIndex",
+    "drivetrainType",
+    "numCylinders",
+    "positionX",
+    "positionY",
+    "positionZ",
+    "speed",
+    "power",
+    "torque",
+    "tireTempFl",
+    "tireTempFr",
+    "tireTempRl",
+    "tireTempRr",
+    "boost",
+    "fuel",
+    "distance",
+    "bestLapTime",
+    "lastLapTime",
+    "currentLapTime",
+    "currentRaceTime",
+    "lap",
+    "racePosition",
+    "accelerator",
+    "brake",
+    "clutch",
+    "handbrake",
+    "gear",
+    "steer",
+    "normalDrivingLine",
+    "normalAiBrakeDifference"
+  ]
+}
