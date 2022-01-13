@@ -12,7 +12,8 @@
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
+    "outDir": "./dist",
   },
   "include": [
     "electron/**/*.ts",
