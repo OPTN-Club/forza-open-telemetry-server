@@ -3,15 +3,9 @@
   "version": "0.0.1",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "electron": "wait-on tcp:3333 && IS_DEV=true electron .",
-    "electron:pack": "electron-builder --dir",
-    "electron:dev": "concurrently -k \"BROWSER=none yarn dev\" \"yarn electron\"",
-    "electron:builder": "electron-builder",
-    "build:for:electron": "vue-tsc --noEmit && ELECTRON=true vite build",
-    "app:build": "yarn build:for:electron && yarn electron:builder"
+    "dev": "nodemon ./src/server.ts",
+    "build": "tsc",
+    "start": "node ./dist/server.js"
   },
   "dependencies": {
     "buffer": "^6.0.3",
