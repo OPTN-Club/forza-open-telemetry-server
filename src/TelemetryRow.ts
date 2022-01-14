@@ -1,4 +1,4 @@
-interface TelemetryRow {
+export interface TelemetryRow {
   isRaceOn: number;
   timestampMS: number;
   engineMaxRpm: number;

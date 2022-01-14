@@ -15,6 +15,7 @@
   },
   "repository": "https://github.com/Forza-Open-Tools/forza-open-telemetry-server",
   "main": "dist/server.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nodemon ./src/server.ts",
     "build": "tsc",
@@ -25,6 +26,13 @@
     "change-case": "^4.1.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
     "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
