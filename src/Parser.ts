@@ -43,9 +43,9 @@ class Parser {
   }
 
   toArray (msg: Buffer) {
-    const data: (number | boolean)[] = [];
+    const data: (number | boolean)[] = [Date.now()];
     let position = 0;
-    this.format.forEach(([name, size, type]) => {
+    this.format.forEach(([, size, type]) => {
       const value = parseTypeMap[type](msg, position);
       // console.log(name, size, type, position, value);
       if (value !== null) {
@@ -58,7 +58,7 @@ class Parser {
   }
 
   toTelemetryRow (msg: Buffer) {
-    const row: TelemetryRow = {} as TelemetryRow;
+    const row: TelemetryRow = { epochMs: Date.now() } as TelemetryRow;
     let position = 0;
     this.format.forEach(([name, size, type]) => {
       const value = parseTypeMap[type](msg, position);

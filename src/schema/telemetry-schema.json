@@ -405,6 +405,7 @@
     "carPerformanceIndex",
     "drivetrainType",
     "numCylinders",
+    "carCategory",
     "positionX",
     "positionY",
     "positionZ",

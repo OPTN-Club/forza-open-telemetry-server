@@ -47,7 +47,7 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
     'import/extensions': [
       'error',
-      'ignorePackages',
+      'never',
       {
         js: 'never',
         jsx: 'never',

@@ -1,4 +1,5 @@
 export interface TelemetryRow {
+  epochMs: number;
   isRaceOn: number;
   timestampMS: number;
   engineMaxRpm: number;
