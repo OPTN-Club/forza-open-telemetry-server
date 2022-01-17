@@ -55,6 +55,14 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asnycArrow: 'always',
+      }
+    ],
     'spaced-comment': [
       'error',
       'always',

@@ -1,17 +1,26 @@
 import fs from 'fs';
 import Collector from './Collector';
 import Parser from './Parser';
+import { Publisher } from './Publisher';
+import WebSocketPublisher from './WebSocketPublisher';
+import FilePublisher from './FilePublisher';
+
+const outfile = fs.openSync('telemetrycapture.json', 'w+');
 
 const parser = new Parser('ForzaHorizon5');
-const outfile = fs.openSync('telemetrycapture.json', 'w+');
+const publishers: Publisher[] = [
+  new WebSocketPublisher(5555),
+  new FilePublisher(),
+];
+
 const server = new Collector(11000, (buf, rinfo) => {
-  console.log('Received message', buf.length, 'bytes long, rinfo.size=', rinfo.size);
+  // console.log('Received message', buf.length, 'bytes long, rinfo.size=', rinfo.size);
   const data = parser.toArray(buf);
-  fs.writeSync(outfile, JSON.stringify(data));
-  fs.writeSync(outfile, '\n');
-  console.log(JSON.stringify(data));
-  // const row = parser.toTelemetryRow(buf);
-  // console.log(JSON.stringify(row));
+  if (data[1]) {
+    publishers.forEach((publisher) => {
+      publisher.publish(data);
+    });
+  }
 });
 
 server.start();
