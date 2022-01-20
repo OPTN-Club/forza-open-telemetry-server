@@ -2,7 +2,13 @@ import { Server } from 'socket.io';
 import { Publisher } from './Publisher';
 
 class WebSocketPublisher implements Publisher {
-  private server = new Server();
+  private server = new Server({
+    cors: {
+      origin: "http://localhost:3333",
+      methods: ["GET", "POST"]
+    }
+  });
+
   private shouldPublish = false;
 
   constructor(private port: number, private eventName = 'telemetry') {
