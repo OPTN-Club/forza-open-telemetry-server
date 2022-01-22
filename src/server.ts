@@ -13,14 +13,17 @@ const publishers: Publisher[] = [
   new FilePublisher(),
 ];
 
+let count = 0;
+
 const server = new Collector(11000, (buf, rinfo) => {
   // console.log('Received message', buf.length, 'bytes long, rinfo.size=', rinfo.size);
   const data = parser.toArray(buf);
-  if (data[1]) {
+  if (count % 15 === 0 && data[1]) {
     publishers.forEach((publisher) => {
       publisher.publish(data);
     });
   }
+  count += 1;
 });
 
 server.start();
