@@ -9,7 +9,7 @@ const outfile = fs.openSync('telemetrycapture.json', 'w+');
 
 const parser = new Parser('ForzaHorizon5');
 const publishers: Publisher[] = [
-  new WebSocketPublisher(5555),
+  // new WebSocketPublisher(5555),
   new FilePublisher(),
 ];
 
@@ -18,7 +18,7 @@ let count = 0;
 const server = new Collector(11000, (buf, rinfo) => {
   // console.log('Received message', buf.length, 'bytes long, rinfo.size=', rinfo.size);
   const data = parser.toArray(buf);
-  if (count % 15 === 0 && data[1]) {
+  if (data[1]) {
     publishers.forEach((publisher) => {
       publisher.publish(data);
     });
