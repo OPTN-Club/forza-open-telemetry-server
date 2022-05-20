@@ -14,11 +14,12 @@
     "email": "aaron@throckmortons.com"
   },
   "repository": "https://github.com/Forza-Open-Tools/forza-open-telemetry-server",
-  "main": "dist/server.js",
-  "types": "dist/index.d.ts",
+  "main": "dist",
+  "types": "dist",
   "scripts": {
     "dev": "nodemon ./src/server.ts",
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist/*",
     "start": "node ./dist/server.js"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   }

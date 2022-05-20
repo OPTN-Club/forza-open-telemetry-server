@@ -1,31 +1,12 @@
 import * as dgram from 'dgram';
 
-// const server = dgram.createSocket('udp4');
-
-// server.on('error', (err) => {
-//   console.log('server error: ', err);
-//   server.close();
-// });
-
-// server.on('message', (msg, rinfo) => {
-//   console.log(`recieved message with length ${msg.length} from ${rinfo.address}:${rinfo.port}`);
-// });
-
-// server.on('listening', () => {
-//   const address = server.address();
-//   console.log(`server listening ${address.address}:${address.port}`);
-// });
-
-// server.bind(69420);
-
-// server.close();
-
 type MessageHandler = (msg: Buffer, rinfo: dgram.RemoteInfo) => void;
 
-class Collector {
+export class Collector {
   private server = dgram.createSocket('udp4');
+  private running = false;
 
-  constructor (private port: number, messageHandler: MessageHandler) {
+  constructor(private port: number, messageHandler: MessageHandler) {
     this.server.on('error', (err) => {
       console.log('server error: ', err);
       this.server.close();
@@ -42,13 +23,11 @@ class Collector {
     });
   }
 
-  private running = false;
-
-  isRunning () {
+  isRunning() {
     return this.running;
   }
 
-  async start () {
+  async start() {
     return new Promise<void>((resolve, reject) => {
       try {
         this.server.bind(this.port, resolve);
@@ -58,7 +37,7 @@ class Collector {
     });
   }
 
-  async stop () {
+  async stop() {
     return new Promise<void>((resolve, reject) => {
       try {
         this.server.close(resolve);
@@ -68,5 +47,3 @@ class Collector {
     });
   }
 }
-
-export default Collector;

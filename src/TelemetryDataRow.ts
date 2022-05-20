@@ -1,5 +1,7 @@
-export interface TelemetryRow {
+export type TelemetryDataRow = {
+  // epochMs is not part of the received data - it is added by the parser
   epochMs: number;
+
   isRaceOn: number;
   timestampMS: number;
   engineMaxRpm: number;
@@ -78,6 +80,10 @@ export interface TelemetryRow {
   drivetrainType: number; // Corresponds to EDrivetrainType; 0 = FWD, 1 = RWD, 2 = AWD
   numCylinders: number; //Number of cylinders in the engine
   carCategory: number;
+
+  unknown1?: unknown;
+  unknown2?: unknown;
+
   positionX: number; // In meters
   positionY: number;
   positionZ: number;

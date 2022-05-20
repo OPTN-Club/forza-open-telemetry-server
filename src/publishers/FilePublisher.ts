@@ -1,11 +1,8 @@
 import fs from 'fs';
-import { Publisher } from './Publisher';
+import { IPublisher } from './types';
 
-class FilePublisher implements Publisher {
+export class FilePublisher implements IPublisher {
   private fileHandle = 0;
-
-  constructor() {
-  }
 
   private getFileHandle() {
     if (!this.fileHandle) {
@@ -19,5 +16,3 @@ class FilePublisher implements Publisher {
     fs.writeSync(handle, `${JSON.stringify(data)}\n`);
   }
 }
-
-export default FilePublisher;
