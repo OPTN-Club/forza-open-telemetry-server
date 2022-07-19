@@ -199,7 +199,7 @@ function createMapByIndex() {
 
 const mapByIndex = createMapByIndex();
 
-export class TelemetryDataArrayLookup {
+class TelemetryDataArrayLookup {
   indexOf(name: keyof TelemetryDataRow): number {
     return mapByName[name];
   }
