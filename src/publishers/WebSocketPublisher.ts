@@ -33,9 +33,13 @@ export class WebSocketPublisher implements IPublisher {
     this.server.listen(this.options.port);
   }
 
-  publish(data: unknown) {
+  publish(data: number[]) {
     if (this.shouldPublish) {
       this.server.sockets.emit(this.options.eventName, data);
     }
+  }
+
+  close() {
+    this.server.close();
   }
 }

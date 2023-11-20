@@ -1,11 +1,11 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { Collector } from './Collector';
 import { Parser } from './Parser/Parser';
 import { IPublisher, FilePublisher, WebSocketPublisher } from './publishers';
 
 const outfile = fs.openSync('telemetrycapture.json', 'w+');
 
-const parser = new Parser('ForzaHorizon5');
+const parser = new Parser('Dash');
 const publishers: IPublisher[] = [
   new WebSocketPublisher({
     port: 5555,
@@ -32,3 +32,26 @@ const server = new Collector(11000, (buf) => {
 });
 
 server.start();
+
+// class Engine {
+//   cylinders: number;
+//   power: number;
+// }
+
+// class Car {
+//   make: string;
+//   model: string;
+
+//   engine: Engine;
+// }
+
+// class Passenger {
+//   firstName: string;
+//   lastName: string;
+// }
+
+// class CarPassengers {
+//   // not actually a class, but represents the join table between Car and Passenger
+//   car: Car;
+//   passenger: Passenger;
+// }

@@ -1,9 +1,9 @@
-import { TelemetryDataRow } from '../TelemetryDataRow';
+import { ForzaHorizon5Telemetry } from '../telemetry/ForzaHorizon5Telemetry';
 import { ParseType } from "./ParseType";
 import { RawParserFormat } from './types';
 
 export class ParserFormatField {
-  name: keyof TelemetryDataRow;
+  name: string;
   size: number;
   type: ParseType;
 

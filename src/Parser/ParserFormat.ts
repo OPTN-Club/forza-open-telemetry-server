@@ -1,12 +1,12 @@
-import fs from 'fs';
-import { TelemetryDataRow } from '../TelemetryDataRow';
+import * as fs from 'fs';
 import { ParserFormatField } from './ParserFormatField';
 import { RawParserFormat, TelemetryFormat } from './types';
 
 export class ParserFormat {
   raw: RawParserFormat[];
   fields: ParserFormatField[];
-  fieldIndexes: Record<keyof TelemetryDataRow, number>;
+  byNameMap: Record<string, number>;
+  byIndexMap: Record<number, string>;
 
   constructor(public formatName: TelemetryFormat) {
     const filename = `./src/formats/${formatName}.format.json`;
@@ -17,12 +17,23 @@ export class ParserFormat {
     this.raw = JSON.parse(formatJson.toString());
 
     this.fields = [];
-    this.fieldIndexes = {} as Record<keyof TelemetryDataRow, number>;
+    this.byNameMap = {};
+    this.byIndexMap = {};
 
     this.raw.forEach((field, index) => {
-      this.fieldIndexes[field[0]] = index;
-      this.fields.push(new ParserFormatField(field));
+      const parserField = new ParserFormatField(field);
+      this.byNameMap[parserField.name] = index;
+      this.byIndexMap[index] = parserField.name;
+      this.fields.push(parserField);
     });
 
+  }
+
+  indexOf(name: string): number {
+    return this.byNameMap[name];
+  }
+
+  nameOf(index: number): string {
+    return this.byIndexMap[index];
   }
 }

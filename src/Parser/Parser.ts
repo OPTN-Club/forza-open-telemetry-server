@@ -1,8 +1,6 @@
-import { TelemetryDataArray } from '../TelemetryDataArray';
-import { TelemetryDataRow } from '../TelemetryDataRow';
 import { ParserFormat } from './ParserFormat';
 import { ParseType } from './ParseType';
-import { LittleEndianReader, TelemetryFormat } from './types';
+import { LittleEndianReader, TelemetryFormat, TelemetryObject } from './types';
 
 const parseTypeMap: Record<ParseType, LittleEndianReader> = {
   [ParseType.double]: (buf: Buffer, offset: number) => buf.readDoubleLE(offset),
@@ -13,7 +11,6 @@ const parseTypeMap: Record<ParseType, LittleEndianReader> = {
   [ParseType.uint16]: (buf: Buffer, offset: number) => buf.readUInt16LE(offset),
   [ParseType.int8]: (buf: Buffer, offset: number) => buf.readInt8(offset),
   [ParseType.uint8]: (buf: Buffer, offset: number) => buf.readUInt8(offset),
-  [ParseType.boolean]: (buf: Buffer, offset: number) => buf.readFloatLE(offset) > 0,
   [ParseType.ignore]: () => null,
 };
 
@@ -24,20 +21,20 @@ export class Parser {
     this.format = new ParserFormat(formatName);
   }
 
-  toArray(msg: Buffer): TelemetryDataArray {
-    const data = Array(89) as TelemetryDataArray;
+  toArray(msg: Buffer): number[] {
+    const data = Array<number>(this.format.fields.length)
     let position = 0;
     this.format.fields.forEach(({ size, type }) => {
       const value = parseTypeMap[type](msg, position);
-      data.push(value);
+      if (value) data.push(value);
       position += size;
     });
 
     return data;
   }
 
-  toTelemetryRow(msg: Buffer): TelemetryDataRow {
-    const row = { epochMs: Date.now() } as TelemetryDataRow;
+  toTelemetryRow(msg: Buffer): TelemetryObject {
+    const row: TelemetryObject = { epochMs: Date.now() };
     let position = 0;
     this.format.fields.forEach(({ name, size, type }) => {
       const value = parseTypeMap[type](msg, position);

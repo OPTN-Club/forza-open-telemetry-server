@@ -1,3 +1,4 @@
 export interface IPublisher {
-  publish(data: unknown): void;
+  publish(data: number[]): void;
+  close(): void;
 }

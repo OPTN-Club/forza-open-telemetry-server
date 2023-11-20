@@ -23,8 +23,20 @@ export class Collector {
     });
   }
 
+  address() {
+    return this.server.address();
+  }
+
   isRunning() {
     return this.running;
+  }
+
+  async setPort(port: number): Promise<void> {
+    this.port = port;
+    if (this.running) {
+      await this.stop();
+      await this.start();
+    }
   }
 
   async start() {
