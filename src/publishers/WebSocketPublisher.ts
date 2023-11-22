@@ -31,6 +31,7 @@ export class WebSocketPublisher implements IPublisher {
       });
     });
     this.server.listen(this.options.port);
+    console.log(`WebSocketPublisher listening on port ${this.options.port}`);
   }
 
   publish(data: number[]) {

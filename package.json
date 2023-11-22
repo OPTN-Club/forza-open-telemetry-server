@@ -16,8 +16,8 @@
   "repository": "https://github.com/Forza-Open-Tools/forza-open-telemetry-server",
   "main": "dist",
   "types": "dist",
-  "type": "module",
   "scripts": {
+    "dev2": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/index.ts",
     "dev": "nodemon ./src/server.ts",
     "build": "npm run clean && npx tsc",
     "clean": "rimraf ./dist/*",
